@@ -5,10 +5,11 @@
 "set makeprg=:terminal\ build.bakkt
 "
 " Set leader key 
-let mapleader ","
+"let mapleader ","
 
 " Chnage to working directory
-:cd d:\work 
+:cd c:\work 
+
 
 " Split and open vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -21,7 +22,7 @@ colorscheme evening
 " Remove ugly gui buttons
 set guioptions=Ace
 
-set guifont=Source_Code_Pro:h14
+set guifont=Lucida_Console:h14
 
 " Don't try to be vi compatible
 set nocompatible 
@@ -77,12 +78,17 @@ runtime! macros/matchit.vim
 " visual autocomplete for command menu
 set wildmenu
 
+" Search down into subfolders
+" Provides tab-completion for all files -related tasks
+set path+=**
+" Hit tab to :find by partial match
+" Use * to make it fuzzy 
+" :b lets you autocomplete any open buffer
+
+
 " Key remaps
 inoremap jk <esc>
 inoremap kj <esc>
-
-" Set leader key
-let mapleader=","
 
 " move to beginning/end of line
 nnoremap B ^
