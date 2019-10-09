@@ -117,6 +117,15 @@ if g:os == "Windows"
     endif
 endif
 
+"Vim-plug 
+call plug#begin('c:/Vim/vim81/plugin')
+    Plug 'vhda/verilog_systemverilog.vim'
+    Plug 'vim-airline/vim-airline'
+    Plug 'scrooloose/nerdtree'
+
+cal plug#end()
+
+
 " Last line
 set showmode
 set showcmd
