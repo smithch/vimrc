@@ -8,7 +8,7 @@
 "let mapleader ","
 
 " Chnage to working directory
-:cd c:\work 
+":cd c:\work 
 
 
 " Split and open vimrc
@@ -122,6 +122,8 @@ call plug#begin('c:/Vim/vim81/plugin')
     Plug 'vhda/verilog_systemverilog.vim'
     Plug 'vim-airline/vim-airline'
     Plug 'scrooloose/nerdtree'
+    Plug 'vimwiki/vimwiki'
+    Plug 'aserebryakov/vim-todo-lists' 
 
 cal plug#end()
 
