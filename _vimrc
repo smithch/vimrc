@@ -121,11 +121,11 @@ if g:os == "Windows"
 endif
 
 "Vim-plug 
-call plug#begin('c:/Vim/vim81/plugin')
+call plug#begin('$HOME/vimfiles')
     Plug 'vhda/verilog_systemverilog.vim'
-    "Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline'
     Plug 'scrooloose/nerdtree'
-    "Plug 'vimwiki/vimwiki'
+    Plug 'vimwiki/vimwiki'
     Plug 'aserebryakov/vim-todo-lists' 
 
 call plug#end()
