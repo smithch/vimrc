@@ -1,5 +1,6 @@
 "Last edit 01/18/2019
 "
+set nocompatible
 
 " Set make program 
 "set makeprg=:terminal\ build.bakkt
@@ -8,8 +9,9 @@
 "let mapleader ","
 
 " Chnage to working directory
-":cd c:\work 
+:cd c:\work 
 
+set modifiable
 
 " Split and open vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -17,7 +19,8 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " Source myvimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-colorscheme evening
+colorscheme zenburn
+"colorscheme evening
 
 " Remove ugly gui buttons
 set guioptions=Ace
@@ -109,8 +112,8 @@ if !exists("g:os")
     endif
 endif
 if g:os == "Windows"
-    set backupdir=.\_backup,.,c:\temp
-    set directory=.\_backup,.,c:\temp
+    set backupdir=.\_backup,c:\temp
+    set directory=.\_backup,c:\temp
 
     if filewritable(expand('%:p:h')."\.") && !filewritable(expand('%:p:h').'\_backup')
     	silent execute '!mkdir "'.expand('%:p:h').'\_backup"'
@@ -120,12 +123,12 @@ endif
 "Vim-plug 
 call plug#begin('c:/Vim/vim81/plugin')
     Plug 'vhda/verilog_systemverilog.vim'
-    Plug 'vim-airline/vim-airline'
+    "Plug 'vim-airline/vim-airline'
     Plug 'scrooloose/nerdtree'
-    Plug 'vimwiki/vimwiki'
+    "Plug 'vimwiki/vimwiki'
     Plug 'aserebryakov/vim-todo-lists' 
 
-cal plug#end()
+call plug#end()
 
 
 " Last line
