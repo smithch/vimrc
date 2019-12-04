@@ -21,11 +21,12 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 colorscheme zenburn
 "colorscheme evening
+"colorscheme wal
 
 " Remove ugly gui buttons
 set guioptions=Ace
 
-set guifont=Lucida_Console:h14
+set guifont=Inconsolata\ for\ Powerline:h15
 
 " Don't try to be vi compatible
 set nocompatible 
@@ -35,6 +36,7 @@ set nocompatible
 
 " Load filetype-specific indent files
 filetype indent on 
+filetype plugin indent on
 
 " Turn on syntax highlighting
 syntax on
@@ -59,7 +61,7 @@ set belloff=all
 set cursorline
 
 " Encoding
-set encoding=utf-8
+set encoding=UTF-8
 
 " Whitespace
 set wrap
@@ -87,6 +89,10 @@ set path+=**
 " Hit tab to :find by partial match
 " Use * to make it fuzzy 
 " :b lets you autocomplete any open buffer
+"
+set foldmethod=syntax
+
+
 
 
 " Key remaps
@@ -120,14 +126,72 @@ if g:os == "Windows"
     endif
 endif
 
+" netrw nerd_tree replacement
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END    
+
+" air-line plugin specific commands
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
 "Vim-plug 
 call plug#begin('$HOME/vimfiles')
     Plug 'vhda/verilog_systemverilog.vim'
     Plug 'vim-airline/vim-airline'
-    Plug 'scrooloose/nerdtree'
+    "Plug 'scrooloose/nerdtree'
+    Plug 'scrooloose/syntastic'
     Plug 'vimwiki/vimwiki'
-    Plug 'aserebryakov/vim-todo-lists' 
-
+    Plug 'aserebryakov/vim-todo-lists'
+    "Plug 'ryanoasis/vim-devicons'
+    Plug 'ervandew/supertab'
+    Plug 'junegunn/vim-easy-align'
+    Plug 'powerline/fonts'
+    Plug 'tpope/vim-commentary'
+    Plug 'junegunn/fzf'
+    Plug 'airblade/vim-gitgutter' 
+    Plug 'tpope/vim-fugitive'    "Git 
+    "Plug 'dylanaraps/wal.vim'
+    Plug 'sjl/badwolf' "Color scheme
+    Plug 'jnurmine/zenburn' "Color scheme
+    Plug 'tpope/vim-surround'
+    Plug 'terryma/vim-multiple-cursors'
+    "Plug 'tpope/vim-vinegar'
+    Plug 'universal-ctags/ctags'
+    Plug 'powerline/powerline-fonts'
+    Plug 'tpope/vim-sensible'
 call plug#end()
 
 
