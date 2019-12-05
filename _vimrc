@@ -188,10 +188,13 @@ call plug#begin('$HOME/vimfiles')
     Plug 'jnurmine/zenburn' "Color scheme
     Plug 'tpope/vim-surround'
     Plug 'terryma/vim-multiple-cursors'
-    "Plug 'tpope/vim-vinegar'
+    Plug 'tpope/vim-vinegar'
     Plug 'universal-ctags/ctags'
     Plug 'powerline/powerline-fonts'
     Plug 'tpope/vim-sensible'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'junegunn/vim-peekaboo'
+    Plug 'mbbill/undotree'
 call plug#end()
 
 
