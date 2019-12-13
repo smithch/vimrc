@@ -130,15 +130,15 @@ if g:os == "Windows"
 endif
 
 " netrw nerd_tree replacement
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-augroup ProjectDrawer
-  autocmd!
-  autocmd VimEnter * :Vexplore
-augroup END    
+" let g:netrw_banner = 0
+" let g:netrw_liststyle = 3
+" let g:netrw_browse_split = 4
+" let g:netrw_altv = 1
+" let g:netrw_winsize = 25
+" augroup ProjectDrawer
+"   autocmd!
+"   autocmd VimEnter * :Vexplore
+" augroup END    
 
 " air-line plugin specific commands
 let g:airline_powerline_fonts = 1
@@ -206,6 +206,9 @@ call plug#begin('$HOME/vimfiles')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'junegunn/vim-peekaboo'
     Plug 'mbbill/undotree'
+    Plug 'danro/rename.vim'
+    Plug 'mhinz/vim-startify'
+
 call plug#end()
 
 
