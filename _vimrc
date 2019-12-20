@@ -178,6 +178,9 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
 "Vim-plug 
 call plug#begin('$HOME/vimfiles')
     Plug 'vhda/verilog_systemverilog.vim'
@@ -208,6 +211,13 @@ call plug#begin('$HOME/vimfiles')
     Plug 'mbbill/undotree'
     Plug 'danro/rename.vim'
     Plug 'mhinz/vim-startify'
+    Plug 'dense-analysis/ale'
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'autozimu/LanguageClient-neovim', {
+        \ 'branch': 'next',
+        \ 'do': 'bash install.sh',
+        \ }
+    
 
 call plug#end()
 
