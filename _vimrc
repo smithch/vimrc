@@ -212,11 +212,13 @@ call plug#begin('$HOME/vimfiles')
     Plug 'danro/rename.vim'
     Plug 'mhinz/vim-startify'
     Plug 'dense-analysis/ale'
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'autozimu/LanguageClient-neovim', {
-        \ 'branch': 'next',
-        \ 'do': 'bash install.sh',
-        \ }
+    "Plug 'Shougo/deoplete.nvim'
+    "Plug 'autozimu/LanguageClient-neovim', {
+    "    \ 'branch': 'next',
+    "    \ 'do': 'bash install.sh',
+    "    \ }
+    Plug 'junegunn/goyo.vim' "Distraction free writing use :Goyo :Goyo!
+    Plug 'junegunn/lmelight.vim' "Dims surrounding paragraphs use :Limelight!
     
 
 call plug#end()
