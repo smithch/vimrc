@@ -218,7 +218,7 @@ call plug#begin('$HOME/vimfiles')
     "    \ 'do': 'bash install.sh',
     "    \ }
     Plug 'junegunn/goyo.vim' "Distraction free writing use :Goyo :Goyo!
-    Plug 'junegunn/lmelight.vim' "Dims surrounding paragraphs use :Limelight!
+    Plug 'junegunn/limelight.vim' "Dims surrounding paragraphs use :Limelight!
     
 
 call plug#end()
