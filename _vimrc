@@ -219,6 +219,7 @@ call plug#begin('$HOME/vimfiles')
     "    \ }
     Plug 'junegunn/goyo.vim' "Distraction free writing use :Goyo :Goyo!
     Plug 'junegunn/limelight.vim' "Dims surrounding paragraphs use :Limelight!
+    Plug 'junegunn/vader.vim'
     
 
 call plug#end()
