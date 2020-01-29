@@ -8,8 +8,7 @@ set nocompatible
 " Set leader key 
 "let mapleader ","
 
-" Chnage to working directory
-:cd c:\work 
+
 
 set modifiable
 
@@ -121,6 +120,14 @@ if !exists("g:os")
     endif
 endif
 if g:os == "Windows"
+    " Chnage to working directory
+    let hostname = substitute(system('hostname'), '\n', '', '')
+    if hostname == "DESKTOP-SFH28A5"
+        :cd d:\work 
+    elseif
+        :cd c:\work
+    endif
+
     set backupdir=.\_backup,c:\temp
     set directory=.\_backup,c:\temp
 
@@ -186,7 +193,7 @@ call plug#begin('$HOME/vimfiles')
     Plug 'vhda/verilog_systemverilog.vim'
     Plug 'vim-airline/vim-airline'
     "Plug 'scrooloose/nerdtree'
-    Plug 'scrooloose/syntastic'
+   " Plug 'scrooloose/syntastic'
     Plug 'vimwiki/vimwiki'
     Plug 'aserebryakov/vim-todo-lists'
     "Plug 'ryanoasis/vim-devicons'
@@ -195,7 +202,7 @@ call plug#begin('$HOME/vimfiles')
     Plug 'powerline/fonts'
     Plug 'tpope/vim-commentary'
     Plug 'junegunn/fzf'
-    Plug 'airblade/vim-gitgutter' 
+   " Plug 'airblade/vim-gitgutter' 
     Plug 'tpope/vim-fugitive'    "Git 
     "Plug 'dylanaraps/wal.vim'
     Plug 'sjl/badwolf' "Color scheme
@@ -206,12 +213,12 @@ call plug#begin('$HOME/vimfiles')
     Plug 'universal-ctags/ctags'
     Plug 'powerline/powerline-fonts'
     Plug 'tpope/vim-sensible'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'junegunn/vim-peekaboo'
     Plug 'mbbill/undotree'
     Plug 'danro/rename.vim'
     Plug 'mhinz/vim-startify'
-    Plug 'dense-analysis/ale'
+    " Plug 'dense-analysis/ale'
     "Plug 'Shougo/deoplete.nvim'
     "Plug 'autozimu/LanguageClient-neovim', {
     "    \ 'branch': 'next',
