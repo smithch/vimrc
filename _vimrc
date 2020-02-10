@@ -120,11 +120,11 @@ if !exists("g:os")
     endif
 endif
 if g:os == "Windows"
-    " Chnage to working directory
+    " Change to working directory
     let hostname = substitute(system('hostname'), '\n', '', '')
     if hostname == "DESKTOP-SFH28A5"
         :cd d:\work 
-    elseif
+    else " Add more hostnames here 
         :cd c:\work
     endif
 
